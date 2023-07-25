@@ -66,7 +66,6 @@ export async function detailsPage(ctx) {
     let showApplyBtn = isOwner == false && hasApply == false && userData !== null;
     ctx.render(detailsTemplate(job,isOwner,onDelete, applies, showApplyBtn,onApply));
 
-
     async function onDelete() {
         await deleteJob(ctx.params.id);
         ctx.page.redirect('/dashboard');

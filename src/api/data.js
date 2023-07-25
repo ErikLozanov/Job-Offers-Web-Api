@@ -25,14 +25,14 @@ export async function deleteJob(id) {
 }
 
 
-export async function applyJob(jobId) {
-    return api.post('/data/applications', {jobId});
+export async function applyJob(offerId) {
+    return api.post('/data/applications', {offerId});
 }
 
-export async function getAppliesByJobId(jobId) {
-    return api.get(`/data/applications?where=offerId%3D%22${jobId}%22&distinct=_ownerId&count`)
+export async function getAppliesByJobId(offerId) {
+    return api.get(`/data/applications?where=offerId%3D%22${offerId}%22&distinct=_ownerId&count`)
 }
-export async function getMyAppliesByJobId(jobId, userId) {
-    return api.get(`/data/applications?where=offerId%3D%22${jobId}%22%20and%20_ownerId%3D%22${userId}%22&count`)
+export async function getMyAppliesByJobId(offerId, userId) {
+    return api.get(`/data/applications?where=offerId%3D%22${offerId}%22%20and%20_ownerId%3D%22${userId}%22&count`)
 }
 
