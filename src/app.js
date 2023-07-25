@@ -7,6 +7,7 @@ import { loginPage } from "./views/login.js";
 import { registerPage } from "./views/register.js";
 import { dashboardPage } from "./views/dashboard.js";
 import { createPage } from "./views/create.js";
+import { detailsPage } from "./views/details.js";
 let root = document.querySelector('main');
 
 function decorateContent(ctx,next) {
@@ -39,6 +40,7 @@ updateUserNav();
 page('/', homePage);
 page('/dashboard', dashboardPage);
 page('/create', createPage);
+page('/details/:id', detailsPage);
 page('/login', loginPage);
 page('/register', registerPage);
 page.start();

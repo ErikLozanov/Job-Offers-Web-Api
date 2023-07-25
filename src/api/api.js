@@ -24,7 +24,7 @@ async function request(method,url,data) {
         let response = await fetch(host + url, options);
 
         if(!response.ok) {
-            const error = response.json();
+            const error = await response.json();
             throw new Error(error.message);
         }
         if(response.status == 204){ 

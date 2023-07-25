@@ -26,7 +26,7 @@ export async function deleteJob(id) {
 
 
 export async function applyJob(jobId) {
-    return api.post('data/applications', {jobId});
+    return api.post('/data/applications', {jobId});
 }
 
 export async function getAppliesByJobId(jobId) {
