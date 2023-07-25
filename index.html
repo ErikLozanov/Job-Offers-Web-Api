@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=\, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>ClearCareer</title>
+    <script src="/src/app.js" type="module"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -18,19 +19,19 @@
 
         <nav>
           <div>
-            <a href="#">Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           </div>
 
           <!-- Logged-in users -->
           <div class="user">
-            <a href="#">Create Offer</a>
-            <a href="#">Logout</a>
+            <a href="/create">Create Offer</a>
+            <a id="logoutBtn" href="#">Logout</a>
           </div>
 
           <!-- Guest users -->
           <div class="guest">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
           </div>
         </nav>
       </header>
