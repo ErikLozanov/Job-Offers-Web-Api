@@ -8,6 +8,7 @@ import { registerPage } from "./views/register.js";
 import { dashboardPage } from "./views/dashboard.js";
 import { createPage } from "./views/create.js";
 import { detailsPage } from "./views/details.js";
+import { editPage } from "./views/edit.js";
 let root = document.querySelector('main');
 
 function decorateContent(ctx,next) {
@@ -41,6 +42,7 @@ page('/', homePage);
 page('/dashboard', dashboardPage);
 page('/create', createPage);
 page('/details/:id', detailsPage);
+page('/edit/:id', editPage);
 page('/login', loginPage);
 page('/register', registerPage);
 page.start();
